@@ -1,11 +1,15 @@
 #!/bin/bash
-echo "Linux [l] or Mac [m] >"
+echo "Linux [l] or Mac [m] or Mac M Chip [mm] >"
 read os 
 
 if [ $os == "m" ] 
 then 
 	url=https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 	exe=Miniconda3-latest-MacOSX-x86_64.sh
+elif [ $os == "mm" ] 
+then 
+	url=https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+	exe=Miniconda3-latest-MacOSX-arm64.sh
 elif [ $os == "l" ] 
 then 
 	url=https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
